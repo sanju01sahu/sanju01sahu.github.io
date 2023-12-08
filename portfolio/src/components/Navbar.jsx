@@ -25,7 +25,7 @@ const Navbar = () => {
       <a className="nav-link contact" href="#contact">
         Contacts
       </a>
-      <a id="resume-button-2" className="nav-link resume" href="#resume">
+      <a id="resume-button-2" target="_blank" className="nav-link resume blue-button" rel="noreferrer" href="https://drive.google.com/file/d/1RiNLbw8ekyplWb2yE_PmwHo96-KdeREM/view">
         Resume
       </a>
         </div>
@@ -47,6 +47,8 @@ const DIV = styled.div`
     height: 80px;
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    position: fixed;
+    background-color: #ffffff;
 
   }
   #nav-menu > div {
@@ -78,4 +80,5 @@ const DIV = styled.div`
     color: white;
   }
 
+  
 `
