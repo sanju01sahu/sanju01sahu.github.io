@@ -28,6 +28,24 @@ const projectData = [
     github: "https://github.com/sanju01sahu/pepper-fry-clone",
     deployed: "https://whimsical-pudding-762f22.netlify.app/pages/home.html",
   },
+  {
+    image:"/nyc-school.png",
+    title:"NYC School",
+    description:"NYC School is a platform for students to which provides academic as well as skill-based learning to the students. Students can either refer to the material being provided or enrol themselves in any of the 58 courses. ",
+    techStack:["HTML","CSS","JavaScript", "JSON Server"],
+    github:"https://github.com/sanju01sahu/nyc-school",
+    deployed:"https://quiet-marshmallow-b4c69a.netlify.app/",
+    
+  },
+  {
+    image:"/wise-pay.png",
+    title:"Wise Pay",
+    description:"A finance sorting website that allows you to calculate your monthly budget.",
+    techStack:["TypeScript", "React", "Redux Tookkit", "JSON Server", "HTML", "CSS"],
+    github:"https://github.com/sanju01sahu/wise-pay",
+    deployed:"https://darling-marigold-462560.netlify.app/",
+    
+  },
 ];
 /**
 {
