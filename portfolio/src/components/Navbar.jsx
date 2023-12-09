@@ -42,7 +42,7 @@ const Navbar = () => {
             Contacts
           </a>
           <a
-            id="resume-link-2"
+            id="resume-button-2"
             target="_blank"
             className="nav-link resume blue-button"
             rel="noreferrer"
