@@ -5,6 +5,7 @@ import GitHubCalendar from "react-github-calendar";
 const GitStats = () => {
   return (
     <DIV>
+      <h2>Git Stats</h2>
       <div>
         <GitHubCalendar username="sanju01sahu" />
 
@@ -30,6 +31,28 @@ const GitStats = () => {
   );
 };
 
-const DIV = styled.div``;
+const DIV = styled.div`
+
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-bottom:100px;
+}
+
+#github-streak-stats,
+#github-top-langs,
+#github-stats-card {
+  width: 100%;
+  max-width: 497px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 600px) {
+  
+}
+
+
+`;
 
 export default GitStats;

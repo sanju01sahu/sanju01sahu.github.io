@@ -28,8 +28,8 @@ export const Home = () => {
               <a href="https://github.com/sanju01sahu" target="_blank" rel="noreferrer" >
                 <img src="/github-logo.png" alt="" />
               </a>
-              <a rel="noreferrer" href="#">
-                <button id="resume-button-1" className="blue-button" >Resume</button>
+              <a rel="noreferrer" target="_blank" href="/Sanjay Sahu-Resume.pdf" download="Sanjay-Sahu-Resume" id="resume-link-1" className="blue-button">
+                Resume
               </a>
             </span>
           </div>
@@ -82,5 +82,17 @@ const DIV = styled.div`
 
   .home-img {
     border-radius: 1160px 1000px;
+  }
+
+  @media screen and (max-width: 600px) {
+    #home div {
+      width: 90%;
+      display: flex;
+      flex-direction: column-reverse;
+      margin: auto;
+      padding: 80px 0px;
+      margin-left:0px
+    }
+  
   }
 `;

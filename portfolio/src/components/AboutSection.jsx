@@ -13,7 +13,7 @@ const AboutSection = () => {
             </span>
             <p>I am Sanjay - A FullStack WebDeveloper, Creator And Engineer</p>
             <span>
-              <p>Learn More</p>
+              <p></p>
             </span>
           </div>
           <div>
@@ -42,6 +42,7 @@ const DIV = styled.div`
     margin: auto;
     background-color: #f1f1f1;
     padding: 100px 0px;
+    font-size:20px;
     
   }
   #about div{
@@ -63,5 +64,24 @@ const DIV = styled.div`
   #about div div{
     display: flex;
     flex-direction: column;
+  }
+  @media screen and (max-width: 600px) {
+    #about {
+      margin-left:0px;
+    }
+    #about h2 {
+      font-size: 100px;
+      color: #e8e8e8;
+      font-weight: 900;
+      text-align: left;
+      padding: 0px 0px 0px 0px;
+      margin: 0px 0px 0px 0px;
+    }
+
+    #about div{
+      width:90%;
+      flex-direction: column;
+      margin-bottom:30px;
+    }
   }
 `;

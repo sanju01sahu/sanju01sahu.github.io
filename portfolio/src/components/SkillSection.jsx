@@ -64,6 +64,7 @@ const SkillSection = () => {
   return (
     <DIV>
       <div className="skill-container">
+      <h2>Tech Stack & Tools</h2>
         <div id="skills">
           {data.map((el, i) => {
             return (
@@ -85,10 +86,11 @@ const SkillSection = () => {
 export default SkillSection;
 
 const DIV = styled.div`
+
   .skill-container{
     width:95%;
     margin:auto;
-
+    font-size:20px;
   }
   #skills {
     width: 80%;
@@ -110,8 +112,18 @@ const DIV = styled.div`
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
   }
-  .skill-card div img {
+  .skills-card-img img {
     align-items: center;
-    height: 30px;
+    height: 100px;
+    
+  }
+
+  @media screen and (max-width: 600px) {
+    #skills {
+      width: 80%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+    }
   }
 `;

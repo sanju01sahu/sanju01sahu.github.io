@@ -46,7 +46,7 @@ const ProjectsSection = () => {
   return (
     <DIV>
       <div id="projects">
-        <h2>Work Speaks</h2>
+      <h2 className="project-heading" >Work Speaks</h2>
         {projectData.map((el, i) => {
           return (
             <div className="project-card">
@@ -60,12 +60,12 @@ const ProjectsSection = () => {
                   <p>TECH Stack: {el.techStack.join(" | ")}</p>
                 </div>
 
-                <div>
+                <div className="project-link" >
                   <a href={el.github} className="project-github-link">
-                    <button>GitHub Link</button>
+                    <button className="blue-button" >GitHub Link</button>
                   </a>
                   <a href={el.deployed} className="project-deployed-link">
-                    <button>Deploved Link</button>
+                    <button className="blue-button" >Deploved Link</button>
                   </a>
                 </div>
               </div>
@@ -80,8 +80,103 @@ const ProjectsSection = () => {
 export default ProjectsSection;
 
 const DIV = styled.div`
-  #projects{
-    
-    margin:auto;
+#projects {
+  width: 98%;
+  background-color: #f1f1f1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 20px;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding-bottom:100px;
+}
+#projects h2{
+  font-size: 200px;
+  color: #e8e8e8;
+  font-weight: 900;
+  text-align: left;
+  padding: 0px 0px 0px 100px;
+  margin: 0px 0px 0px 0px;
+}
+
+.project-card {
+  width: 60%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
   }
+
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  h3.project-title {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+
+  p.project-description {
+    font-size: 1rem;
+    color: #555;
+  }
+
+  .project-tech-stack {
+    margin-top: 10px;
+  }
+
+  a.project-github-link,
+  a.project-deployed-link {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+
+  .project-link{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: space-evenly;
+    margin: 20px;
+  }
+  
+}
+@media screen and (max-width: 600px) {
+  #projects h2{
+    font-size: 100px;
+    color: #e8e8e8;
+    font-weight: 900;
+    text-align: left;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+  }
+}
 `;
