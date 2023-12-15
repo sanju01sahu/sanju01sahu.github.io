@@ -108,6 +108,7 @@ const DIV = styled.div`
     position: fixed;
     background-color: #ffffff;
     z-index: 100;
+    
   }
   #nav-menu .menu {
     display: none;
@@ -133,10 +134,11 @@ const DIV = styled.div`
   #nav-menu > div > a {
     padding: 15px 20px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 25px;
     border-radius: 5px;
-    color: #9aa5ae;
+    color: #a6a4a4;
     text-transform: uppercase;
+    font-weight: 600;
   }
 
   #nav-menu > div > a:hover {
@@ -160,13 +162,14 @@ const DIV = styled.div`
   }
   
   .logo-name {
-    color: #9aa5ae;
+    color: #a6a4a4;
     font-weight: 900;
   }
-  .logo-small {
-    display: none;
-    color: #9aa5ae;
-    font-weight: 900;
+  
+  @media screen and (max-width: 1150px) {
+    #nav-menu > div > a {
+      font-size: 20px;
+    }
   }
 
   @media screen and (max-width: 1050px) {
@@ -176,6 +179,7 @@ const DIV = styled.div`
     #nav-menu .links {
       display: none;
     }
+    
 
     #nav-menu .open {
       display: flex !important;
