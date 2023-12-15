@@ -1,6 +1,24 @@
 import React from "react";
 import styled from "styled-components";
-export const handleResume = (e)=>{
+import { useState,useEffect } from "react";
+
+const helloInLanguages = [
+  'Hello',         // English
+  'नमस्ते',        // Hindi
+  'नमस्कारम्',     // Sanskrit
+  'வணக்கம்',      // Tamil
+  'Hola',           // Spanish
+  '你好',             // Mandarin (Chinese)
+  'こんにちは',       // Japanese
+  'Привет',         // Russian
+  'Bonjour',        // French
+  'Hallo',          // German
+  'ഹലോ',            // Malayalam
+  'Olá',            // Portuguese
+  '안녕하세요',        // Korean
+];
+
+const handleResume = (e)=>{
   e.preventDefault(); // Prevent the default link behavior
   window.open("https://drive.google.com/file/d/1RiNLbw8ekyplWb2yE_PmwHo96-KdeREM/view?usp=drive_link", "_blank")
     // Create a temporary link
@@ -10,28 +28,42 @@ export const handleResume = (e)=>{
     link.href="/Sanjay Sahu-Resume.pdf"; // Replace with the actual path to your resume PDF
     link.target = '_blank';
     link.download="Sanjay-Sahu-Resume"; // Replace with the desired file name
-
+    
     // Append the link to the document
     document.body.appendChild(link);
-
+    
     // Trigger a click on the link
     link.click();
-
+    
     // Remove the link from the document
     document.body.removeChild(link);
-}
+  }
+  
+  
+ 
 
 export const Home = () => {
+
+  const [index,setIndex] = useState(0);
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setIndex((prev) => (prev + 1) % helloInLanguages.length);
+    }, 2000);
+
+    // Clear the interval when the component is unmounted
+    return () => clearInterval(intervalId);
+  }, []);
+
+  
 
   return (
     <DIV>
       <div id="home">
         <div>
           <div>
-            <h2 id="user-detail-name">Hello, I am Sanjay Sahu.</h2>
-            <p></p>
+            <h2 id="user-detail-name">{helloInLanguages[index|| 0]} , I am Sanjay Sahu.</h2>
             <p id="user-detail-intro">
-            A FullStack WebDeveloper, Creator And Engineer
+            A FullStack WebDeveloper, Creator And Engineer.
             </p>
             <span>
             <a
@@ -53,7 +85,7 @@ export const Home = () => {
             </span>
           </div>
           <div>
-            <img class="home-img" src="/profile.jpg" alt="Sanjay Sahu" />
+            <img className="home-img" src="/profile.jpg" alt="Sanjay Sahu" />
           </div>
         </div>
       </div>
@@ -98,11 +130,16 @@ const DIV = styled.div`
     
     height:40px;
   }
-
+  
   .home-img {
     border-radius: 1160px 1000px;
   }
-
+  #user-detail-name{
+    font-size:38px;
+  }
+  #user-detail-intro{
+    font-size:20px;
+  }
   @media screen and (max-width: 600px) {
     #home div {
       width: 90%;
@@ -110,8 +147,11 @@ const DIV = styled.div`
       flex-direction: column-reverse;
       margin: auto;
       padding: 80px 0px;
-      margin-left:0px
+      text-align:center;
     }
-  
+    
+    #user-detail-intro{
+      font-size:25px;
+    }
   }
 `;

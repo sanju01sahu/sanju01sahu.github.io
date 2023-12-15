@@ -5,13 +5,21 @@ const AboutSection = () => {
   return (
     <DIV>
       <div id="about" className="about section">
-        <h2>About</h2>
+        <h2 className="section-heading" >About</h2>
         <div>
           <div>
             <span>
               <p> </p>
             </span>
-            <p>I am Sanjay - A FullStack WebDeveloper, Creator And Engineer</p>
+            <p>
+            Outcome-driven Full Stack Web Developer. Proficient in MERN stack,
+            showing intermediate-level skills in Data Structures and Algorithms.
+            Accomplished in both solo and collaborative projects, blending
+            technical prowess with effective teamwork. Adept in designing and
+            optimizing server-side APIs with Node.js and Express.js, crafting
+            responsive web applications using React.js, and proficient in
+            MongoDB for efficient database operations.
+            </p>
             <span>
               <p></p>
             </span>
@@ -53,12 +61,7 @@ const DIV = styled.div`
     flex-direction: row;
   }
   #about h2 {
-    font-size: 200px;
-    color: #e8e8e8;
-    font-weight: 900;
-    text-align: left;
-    padding: 0px 0px 0px 100px;
-    margin: -80px 0px 0px 0px;
+    
   }
 
   #about div div{

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const projectData = [
   {
-    image: "/gemgarden.png",
+    image: "../../gemgarden.png",
     title: "GEM GARDEN",
     description:
       "Welcome to GEM GARDEN, your premier destination for exquisite designer jewelry! Our e-commerce website is designed to provide an unparalleled shopping experience for jewelry enthusiasts of all tastes.",
@@ -64,10 +64,10 @@ const ProjectsSection = () => {
   return (
     <DIV>
       <div id="projects">
-      <h2 className="project-heading" >Work Speaks</h2>
+      <h2 className="section-heading" >Work Speaks</h2>
         {projectData.map((el, i) => {
           return (
-            <div className="project-card">
+            <div key={i} className="project-card">
               <div>
                 <img src={el.image} alt="" />
               </div>
@@ -105,21 +105,13 @@ const DIV = styled.div`
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-start;
-  padding: 20px;
   flex-direction: column;
   margin: auto;
-  margin-top: 100px;
+  padding-top: 100px;
   margin-bottom: 100px;
   padding-bottom:100px;
 }
-#projects h2{
-  font-size: 200px;
-  color: #e8e8e8;
-  font-weight: 900;
-  text-align: left;
-  padding: 0px 0px 0px 100px;
-  margin: 0px 0px 0px 0px;
-}
+
 
 .project-card {
   width: 60%;
@@ -131,6 +123,7 @@ const DIV = styled.div`
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
+  text-align: center;
 
   &:hover {
     transform: scale(1.05);
@@ -164,19 +157,7 @@ const DIV = styled.div`
   }
 
 
-  button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-
-    &:hover {
-      background-color: #0056b3;
-    }
-  }
+  
 
   .project-link{
     display: flex;
@@ -195,6 +176,9 @@ const DIV = styled.div`
     text-align: left;
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 0px 0px;
+  }
+  .project-card{
+    width:80%;
   }
 }
 `;
