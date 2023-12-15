@@ -23,7 +23,7 @@ const projectData = [
     image: "pepperfry.png",
     title: "Pepper Fry Clone",
     description:
-      "An e-commerce web site that is the clone of a furniture oriented store and online store.",
+      "An e-commerce web site that is the clone of a furniture oriented store and online store Pepper Fry. The Store has the calalog of all kinds of furniture for all settings such as homes and office.",
     techStack: ["HTML5", "CSS3", "JavaScript", "JSON Server"],
     github: "https://github.com/sanju01sahu/pepper-fry-clone",
     deployed: "https://whimsical-pudding-762f22.netlify.app/pages/home.html",
@@ -40,7 +40,7 @@ const projectData = [
   {
     image:"/wise-pay.png",
     title:"Wise Pay",
-    description:"A finance sorting website that allows you to calculate your monthly budget.",
+    description:"A finance sorting website that allows you to calculate your monthly budget. The application allows user to keep track of their budget as soon as the make any expense by linking the app with their respective accounts.",
     techStack:["TypeScript", "React", "Redux Tookkit", "JSON Server", "HTML", "CSS"],
     github:"https://github.com/sanju01sahu/wise-pay",
     deployed:"https://darling-marigold-462560.netlify.app/",
