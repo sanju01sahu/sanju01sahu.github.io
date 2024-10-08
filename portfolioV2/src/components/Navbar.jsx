@@ -11,7 +11,7 @@ const Navbar = () => {
 
   const handleResume = (e) => {
     e.preventDefault(); // Prevent the default link behavior
-    window.open("https://drive.google.com/file/d/1RiNLbw8ekyplWb2yE_PmwHo96-KdeREM/view?usp=drive_link", "_blank")
+    window.open("https://drive.google.com/file/d/1HL5TwPGeljnXJptNnXpxzutHW-WflIiu/view?usp=sharing", "_blank")
       // Create a temporary link
       let link = document.createElement('a');
       
